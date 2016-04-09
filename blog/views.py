@@ -9,4 +9,4 @@ def post_detail(request, pk):
 
 def post_list(request):
 	posts = Post.objects.filter(yayinlama_tarihi__lte=timezone.now()).order_by('yayinlama_tarihi')
-	return render(request,'blog\post_list.html',{'posts': posts})
+	return render(request,'blog/post_list.html',{'posts': posts})
